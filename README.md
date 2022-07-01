@@ -8,13 +8,13 @@ This is my project made for graduating University of Science and Technology in 3
 ## Schematic and how does it work.
 The heart of the circuit is Atmega328P, I've considered choosing STM32, but I felt more confident with arduino, as I was playing with this a lot.
 
-Basically the circuit works almost exactly like analog stompbox, the difference is that signal is modified by a processor, not by op-amps, transistors or diodes.
+Basically the circuit works almost exactly like any basic analog stompbox, the difference is that signal is mostly modified by a processor, not by op-amps, transistors or diodes.
 
-There is Input stage which purpose is to filter out signal and boost it to desired level, but not higher than 5V, because this is supply voltage value so more volts would possibly damage microcontroller.
+There is Input stage which purpose is to filter out signal and boost it to desired level, but not higher than 5V, because it's supply voltage value of microcontroller so more volts would possibly damage it.
 
-Atmega is programmed to take sample of our filtered signal, represented by voltage level, then process it by our program, and finally outputs it by setting logic states on register, which are related to processed sample. ADC sampling rate was set to approx 38.5KHz, I was able to get that value by changing register bits and prescaler.
+Atmega is programmed to take sample of our filtered signal, represented by voltage level, then process it by our program, and finally outputs it by setting logic states on register, which are related to processed sample. ADC sampling rate was set to approx 38.5KHz, I was able to get that value by changing some ADC register bits and prescaler.
 
-Output stage is created with 10bit R2R ladder, which is able ro represent voltage as binary values on our register. Last step is to filter out signal nad proceed it to amplifier.
+Output stage is created with 10bit R2R ladder, which is able to represent voltage as binary values on our register. Last step is to filter out signal nad proceed it to amplifier.
 
 ![Schematic](/Schematic/Schematic.png)
 
@@ -40,7 +40,7 @@ Top and side of enclosure
 
 ## Testing effects on osciloscope
 
-For testing purpose I used sine generator and Hameg HM408 osciloscope. I've connected first probe of osciloscope to the input of atmega328 (right after gain section and before ADC of microcontroller). Second probe was connected directly to the output of the stompbox. Upper signal on osciloscope screen is input view, lower signal on osciloscope screen is output view. Frequency of generated sine wave was 440Hz, Amplitude was set to 300-400mV peak to peak. As you can upper signal of the osciloscope is at 4V because potentiometer at gain section was set to amplify signal about 10 times. For every effect I've measured time of processing one sample.
+For testing purpose I used sine generator and Hameg HM408 osciloscope. I've connected first probe of osciloscope to the input of atmega328 (right after gain section and before ADC of microcontroller). Second probe was connected directly to the output of the stompbox. Upper signal on osciloscope screen is reference input view (clean amplified sine), lower signal on osciloscope screen is output view (signal after being processed). Frequency of generated sine wave was 440Hz, Amplitude was set to 300-400mV peak to peak. As you can see, upper signal of the osciloscope is measured at 4V because potentiometer at gain section was set to amplify signal about 10 times. There are two pictures for every effect, first one shows how processed signal looks like, second one shows measured time of processing one sample (right top corner)
 
 
 ### Clean effect
@@ -75,4 +75,4 @@ Just to remind you, the stompbox is fully digital so there is no true bypass for
 
 ## Summary
 
-I have to admit, that it was pretty hard project. It took me a lot of time to figure out how all of this stuff works, despite this at the end I'm very happy and proud of myself because I've managed to get it work for real.
+I have to admit, that it was pretty interesting but hard project. It took me a lot of time to figure out how all of this stuff works, despite this at the end I'm very happy and proud of myself because I've managed to get it work for real.
