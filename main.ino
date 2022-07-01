@@ -2,6 +2,12 @@
 #include "Logic.h"
 #include "Lcd.h"
 
+/* 
+Author: Kamil Koltowski
+Date: 31-01-2022
+Description: Digital guitar effects based on microprocessor
+*/
+
 /* Program Variables */
 int input;
 int output;
