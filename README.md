@@ -1,6 +1,6 @@
 # Digital guitar stompbox based on Atmega328P (Arduino)
 
-This is my project made for graduating University of Science and Technology in 31-01-2022. The idea behind the project, was that I started being very curious how analog guitar stompboxes are made, I was reading a lot and I was so amazed how we can change audio signal by electronic components. Due to that my studies were focused on low level programming and processors architecture, I wanted to build my very first, fully digital guitar pedal.
+This is my project made for graduating University of Science and Technology in Wroclaw in 31-01-2022. The idea behind the project, was that I started being very curious how analog guitar stompboxes are made, I was reading a lot and I was so amazed how we can change audio signal by electronic components. Due to that my studies were focused on low level programming and processors architecture, I wanted to build my very first, fully digital guitar pedal.
 
 
 ![Final stompbox](/Pictures/Enclosure_top.jpeg)
@@ -75,4 +75,4 @@ Just to remind you, the stompbox is fully digital so there is no true bypass for
 
 ## Summary
 
-I have to admit, that it was pretty interesting but hard project. It took me a lot of time to figure out how all of this stuff works, despite this at the end I'm very happy and proud of myself because I've managed to get it work for real.
+I have to admit, that it was pretty interesting but hard project. It took me a lot of time to figure out how all of this stuff works, despite this at the end I'm very happy and proud of myself because I've learned a lot about electronic audio stuff, about processor signal processing and I've managed to get it work for real.
